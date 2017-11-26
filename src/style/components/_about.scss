@@ -4,6 +4,10 @@
   .wrapper{
     .about-block{
       display: flex;
+      @include breakpoint(max-width 600px){
+        display: block;
+        text-align: center;
+      }
       .about-pic{
         margin-right: 30px;
         border-radius: 100%;

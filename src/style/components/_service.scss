@@ -4,6 +4,8 @@
     .items{
       @include row-flex();
       @include md(justify-content, center);
+      @include sm(justify-content, center);
+      @include xs(justify-content, center);
       .item{
         @include col();
         @include size(3);

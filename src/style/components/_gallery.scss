@@ -5,6 +5,9 @@
   background-image: url(#{$img-path}gallery-bg.jpg);
   background-position: center top;
   background-repeat: no-repeat;
+  @include breakpoint(max-width 820px){
+    margin-top: 0px;
+  }
   .wrapper{
     .items{
       display: flex;
@@ -23,6 +26,8 @@
         word-wrap: break-word;
         width: calc(25% - 12px);
         margin-bottom: 12px;
+        cursor: pointer;
+        transition: box-shadow 0.2s;
         @include breakpoint(max-width 840px){
           width: calc(33.333% - 12px);
         }
@@ -31,6 +36,9 @@
         }
         @include breakpoint(max-width 400px){
           width: calc(100%);
+        }
+        &:hover{
+          box-shadow: 0px 0px 2px 1px rgba(207, 14, 14, 0.43);
         }
         .date{
           color: $color-acent;
