@@ -1,0 +1,42 @@
+html{
+  font-size: $font-size;
+  font-family: $font-roboto;
+  line-height: $base-line-height;
+}
+body {
+  color: $color-text-primary;
+}
+
+main {
+   min-height: calc(100vh - (#{$footer-height} + #{$header-height}));
+}
+
+.left-sidebar{
+
+}
+.right-sidebar{
+
+}
+.content{
+
+}
+//if use grid system
+.wrapper{
+  @include wrapper();
+}
+.container{
+  max-width: $container-max-width;
+  min-width: $container-min-width;
+  margin: auto;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+}
+a{
+  transition: color 0.2s ease;
+  &:hover{
+    color: $color-link-hover;
+  }
+}
+.text-center{
+  text-align: center;
+}

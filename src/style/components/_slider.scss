@@ -1,0 +1,69 @@
+.main-slider{
+  height: 500px;
+  padding-top: 65px;
+  background-size: cover;
+  .wrapper{
+    display: flex;
+    align-items: center;
+  }
+  .main-form{
+    .header-block{
+      h1{
+        font-weight: 300;
+        line-height: 1.3em;
+      }
+      .pers-name{
+        color: $color-secondary;
+        font-size: 1.7em;
+        text-transform: uppercase;
+      }
+      .pers-surname{
+        font-size: 1.35em;
+        font-weight: 100;
+        color: $color-secondary;
+      }
+      .pers-descr{
+        font-size: 1.1rem;
+        color: $color-acent;
+      }
+    }
+    .form-row{
+      line-height: 0.9rem;
+      width: 385px;
+      input[type=text]{
+        width: 100%;
+        padding-left:20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+        height: 50px;
+        border-radius: 30px;
+        border:1px solid $color-acent;
+        color: $color-acent;
+        background-color: transparent;
+      }
+      margin-bottom: 15px;
+    }
+    .pact-text{
+      font-size: 0.8rem;
+      line-height: 1rem;
+      color: $color-acent;
+    }
+    .order-btn{
+      padding-left:20px;
+      padding-right: 20px;
+      padding-top:10px;
+      padding-bottom:10px;
+      border-radius: 30px;
+      border: none;
+      background-color: $color-acent;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      &:hover{
+        background-color: $color-link-hover;
+      }
+    }
+  }
+}

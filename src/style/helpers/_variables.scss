@@ -1,0 +1,42 @@
+////_____fonts property_____/////////
+$font-path: '/fonts/';
+$font-open-sans: 'Open Sans';
+$font-roboto: 'Roboto';
+
+$font-size: 16px;
+/////////////////////////////////////
+
+$img-path : "../images/";
+
+////___typography property____//////
+$base-line-height: 1.5;
+
+///////////___colors__//////////////
+$color-white: #ffffff;
+$color-black: #000;
+$color-auqa: #2dbacb;
+$color-dark-auqa: #018288;
+$color-dark: #34383b;
+$color-red: #e43d3d;
+////////////////////////////////////
+////____text colors property___//////
+$color-primary:$color-white;
+$color-acent: $color-auqa;
+$color-secondary: $color-dark-auqa;
+$color-text-primary: $color-dark;
+$color-link-hover: $color-red;
+//////////////////////////////////
+
+
+////////___size of layouts___///////
+$container-max-width: 1200px;
+$container-min-width: 320px;
+$container-padding: 15px;
+
+$desktop-width: 1000px;
+
+$header-height: 65px;
+$footer-height: 85px;
+$sidebar-left: 240px;
+$sidebar-right: 200px;
+///////////////////////////////////

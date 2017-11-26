@@ -1,0 +1,106 @@
+$ic-fb-hover-name: 'ic-fb-hover';
+$ic-fb-hover-x: 0px;
+$ic-fb-hover-y: 0px;
+$ic-fb-hover-offset-x: 0px;
+$ic-fb-hover-offset-y: 0px;
+$ic-fb-hover-width: 35px;
+$ic-fb-hover-height: 35px;
+$ic-fb-hover-total-width: 105px;
+$ic-fb-hover-total-height: 70px;
+$ic-fb-hover-image: '/images/sprite.png';
+$ic-fb-hover: (0px, 0px, 0px, 0px, 35px, 35px, 105px, 70px, '/images/sprite.png', 'ic-fb-hover', );
+$ic-fb-name: 'ic-fb';
+$ic-fb-x: 35px;
+$ic-fb-y: 0px;
+$ic-fb-offset-x: -35px;
+$ic-fb-offset-y: 0px;
+$ic-fb-width: 35px;
+$ic-fb-height: 35px;
+$ic-fb-total-width: 105px;
+$ic-fb-total-height: 70px;
+$ic-fb-image: '/images/sprite.png';
+$ic-fb: (35px, 0px, -35px, 0px, 35px, 35px, 105px, 70px, '/images/sprite.png', 'ic-fb', );
+$ic-inst-hover-name: 'ic-inst-hover';
+$ic-inst-hover-x: 0px;
+$ic-inst-hover-y: 35px;
+$ic-inst-hover-offset-x: 0px;
+$ic-inst-hover-offset-y: -35px;
+$ic-inst-hover-width: 35px;
+$ic-inst-hover-height: 35px;
+$ic-inst-hover-total-width: 105px;
+$ic-inst-hover-total-height: 70px;
+$ic-inst-hover-image: '/images/sprite.png';
+$ic-inst-hover: (0px, 35px, 0px, -35px, 35px, 35px, 105px, 70px, '/images/sprite.png', 'ic-inst-hover', );
+$ic-inst-name: 'ic-inst';
+$ic-inst-x: 35px;
+$ic-inst-y: 35px;
+$ic-inst-offset-x: -35px;
+$ic-inst-offset-y: -35px;
+$ic-inst-width: 35px;
+$ic-inst-height: 35px;
+$ic-inst-total-width: 105px;
+$ic-inst-total-height: 70px;
+$ic-inst-image: '/images/sprite.png';
+$ic-inst: (35px, 35px, -35px, -35px, 35px, 35px, 105px, 70px, '/images/sprite.png', 'ic-inst', );
+$ic-vk-hover-name: 'ic-vk-hover';
+$ic-vk-hover-x: 70px;
+$ic-vk-hover-y: 0px;
+$ic-vk-hover-offset-x: -70px;
+$ic-vk-hover-offset-y: 0px;
+$ic-vk-hover-width: 35px;
+$ic-vk-hover-height: 35px;
+$ic-vk-hover-total-width: 105px;
+$ic-vk-hover-total-height: 70px;
+$ic-vk-hover-image: '/images/sprite.png';
+$ic-vk-hover: (70px, 0px, -70px, 0px, 35px, 35px, 105px, 70px, '/images/sprite.png', 'ic-vk-hover', );
+$ic-vk-name: 'ic-vk';
+$ic-vk-x: 70px;
+$ic-vk-y: 35px;
+$ic-vk-offset-x: -70px;
+$ic-vk-offset-y: -35px;
+$ic-vk-width: 35px;
+$ic-vk-height: 35px;
+$ic-vk-total-width: 105px;
+$ic-vk-total-height: 70px;
+$ic-vk-image: '/images/sprite.png';
+$ic-vk: (70px, 35px, -70px, -35px, 35px, 35px, 105px, 70px, '/images/sprite.png', 'ic-vk', );
+$spritesheet-width: 105px;
+$spritesheet-height: 70px;
+$spritesheet-image: '/images/sprite.png';
+$spritesheet-sprites: ($ic-fb-hover, $ic-fb, $ic-inst-hover, $ic-inst, $ic-vk-hover, $ic-vk, );
+$spritesheet: (105px, 70px, '/images/sprite.png', $spritesheet-sprites, );
+
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

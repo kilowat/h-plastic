@@ -1,0 +1,22 @@
+.about{
+  background-color: #f9fdff;
+  padding-top:40px;
+  .wrapper{
+    .about-block{
+      display: flex;
+      .about-pic{
+        margin-right: 30px;
+        border-radius: 100%;
+        padding: 5px;
+        box-shadow: 1px 1px 2px 0px rgba(0,4,3,.2);
+      }
+      .about-text{
+        font-weight: 100;
+        p{
+          margin: 0;
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+.consult-form{
+  padding-bottom: 50px;
+  position: relative;
+  height: 450px;
+  .cons-decor{
+    background-image: url(#{$img-path}cons-bg.png);
+    position: absolute;
+    width: 100%;
+    height: 93%;
+    top: -7%;
+  }
+  .wrapper{
+    position: relative;
+    .form-block{
+      padding-top: 10px;
+      height: 100%;
+      z-index: 2;
+      display: inline-block;
+      width: 780px;
+      position: absolute;
+      left: 50%;
+      margin-left:-390px;
+      .form-header{
+        font-size: 2em;
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 40px;
+        border:2px dashed #fff;
+        padding: 10px;
+      }
+      .form-row{
+        input[type=text]{
+          height: 50px;
+          width: 47%;
+          border-radius: 30px;
+          border: 1px solid #fff;
+          background-color: transparent;
+          padding-left:20px;
+          padding-right: 20px;
+          box-sizing: border-box;
+          display: inline-block;
+          color: #fff;
+          margin-top:5px;
+          margin-bottom: 5px;
+          font-size: 1.1rem;
+          font-size: 300;
+          &:first-child{
+            margin-right: 1%;
+          }
+          &:last-child{
+            margin-left: 1%;
+          }
+          &{
+            ::-webkit-input-placeholder {color:#fff;}
+            ::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
+            :-moz-placeholder           {color:#fff;}/* Firefox 18- */
+            :-ms-input-placeholder      {color:#fff;}
+          }
+        }
+        .descr-text{
+          margin-top: 20px;
+          margin-bottom: 20px;
+          color: #fff;
+          font-weight: 300;
+          font-size: 0.9rem;
+          >*{
+            display: inline-block;
+            vertical-align: middle;
+          }
+        }
+        .consult-btn{
+          padding: 15px;
+          padding-left:20px;
+          padding-right: 20px;
+          border-radius: 30px;
+          background-color: $color-secondary;
+          color: #fff;
+          border:none;
+          cursor: pointer;
+          transition: background-color 0.2s;
+          &:hover{
+            background-color: $color-link-hover;
+          }
+        }
+      }
+    }
+  }
+}

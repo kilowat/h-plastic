@@ -1,0 +1,83 @@
+.gallery-block{
+  background-color: #ddf0f9;
+  padding-bottom: 75px;
+  margin-top: -65px;
+  background-image: url(#{$img-path}gallery-bg.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  .wrapper{
+    .items{
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -6px;
+      margin-right: -6px;
+      .item{
+        box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.2);
+        text-align: center;
+        background-color: #fff;
+        padding: 5px;
+        padding-bottom: 10px;
+        box-sizing: border-box;
+        margin-left: 6px;
+        margin-right: 6px;
+        word-wrap: break-word;
+        width: calc(25% - 12px);
+        margin-bottom: 12px;
+        @include breakpoint(max-width 840px){
+          width: calc(33.333% - 12px);
+        }
+        @include breakpoint(max-width 680px){
+          width: calc(50% - 12px);
+        }
+        @include breakpoint(max-width 400px){
+          width: calc(100%);
+        }
+        .date{
+          color: $color-acent;
+          font-weight: 100;
+          font-size: 0.9rem;
+        }
+        .pic{
+          position: relative;
+          >img{
+          width: 100%;
+          }
+          &:before{
+            display: block;
+            padding: 2px;
+            content: "До";
+            position: absolute;
+            background-color: #ccc;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            color: #fff;
+            padding-left: 15px;
+            padding-right: 15px;
+            top:10px;
+            left: 4%;
+          }
+          &:after{
+            display: block;
+            padding: 2px;
+            content: "После";
+            position: absolute;
+            background-color: $color-acent;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            color: #fff;
+            padding-left: 15px;
+            padding-right: 15px;
+            top:10px;
+            left: 55%;
+          }
+        }
+        .date{
+
+        }
+        .name{
+
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.reviews-block{
+  text-align: center;
+  background-color: #f9fdff;
+  padding-bottom: 50px;
+  .items{
+    width: 80%;
+    display: inline-block;
+    .item{
+      text-align: center;
+      display: inline-block;
+      >img{
+        display: inline-block;
+      }
+    }
+  }
+  .slick-next,.slick-prev{
+    background-image: url(#{$img-path}arrow.png);
+    height: 50px;
+    &:before{
+      opacity: 0;
+    }
+  }
+  .slick-prev{
+    transform: rotate(180deg);
+  }
+}

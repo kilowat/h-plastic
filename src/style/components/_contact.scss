@@ -1,0 +1,30 @@
+.contact-block{
+  text-align: center;
+  .contact-text{
+    width: 70%;
+    display: inline-block;
+    >*{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    ul{
+      li{
+        text-align: left;
+        text-decoration: none;
+        list-style: none;
+        font-weight: 100;
+        a{
+          color: $color-acent;
+          transition: color 0.3s;
+          &:hover{
+            color: $color-link-hover;
+          }
+        }
+      }
+    }
+  }
+  .ya-map{
+    height: 450px;
+    background-color: #ccc;
+  }
+}
